@@ -1,19 +1,19 @@
-### Repaso basico de docker
-### REPASO GENERAL
+# Repaso basico de docker
+## REPASO GENERAL
 
-### Docker 2021
+## Docker 2021
 
-### Repaso completo. Toda la info es del Pelado Nerd de:
+#### Repaso completo. Toda la info es del Pelado Nerd de:
 https://www.youtube.com/watch?v=CV_Uf3Dq-EU
 
 
-# Como ejecutar una imagen, la tenga o no en mi pc:
+#### Como ejecutar una imagen, la tenga o no en mi pc:
 docker run nginx (una vez que levanta queda en consola, con Ctrl+c se corta)
 
-# Como listar las imágenes:
+#### Como listar las imágenes:
 docker images
 
-# Como listar las imágenes históricas:
+#### Como listar las imágenes históricas:
 docker images ps 
 # si son muchas:
 docker images ps -a | head
