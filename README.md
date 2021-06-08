@@ -3,12 +3,12 @@
 
 ## Docker 2021
 
-#### Repaso completo. Toda la info es del Pelado Nerd de:
+### Repaso completo. Toda la info es del Pelado Nerd de:
 https://www.youtube.com/watch?v=CV_Uf3Dq-EU
 
 
-#### Como ejecutar una imagen, la tenga o no en mi pc:
-docker run nginx (una vez que levanta queda en consola, con Ctrl+c se corta)
+### Como ejecutar una imagen, la tenga o no en mi pc:
+``docker run nginx (una vez que levanta queda en consola, con Ctrl+c se corta)`
 
 #### Como listar las imágenes:
 docker images
