@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+
+#docker run -dp 3000:3000 --network todo-app -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=rodpincha -e MYSQL_DB=todos contenedor-prueba:v1
+
+  app:
+    image: contenedor-prueba:v1
+    ports:
+      - 3000:3000
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_USER: root
+      MYSQL_PASSWORD: rodpincha
+      MYSQL_DB: todos
+  
+# docker run -d     --network todo-app --network-alias mysql     -v todo-mysql-data:/var/lib/mysql     -e MYSQL_ROOT_PASSWORD=rodpincha     -e MYSQL_DATABASE=todos     mysql:5.7
+
+  mysql:
+    image: mysql:5.7
+    volumes:
+      - ./todo-mysql-data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: rodpincha
+      MYSQL_DATABASE: todos
+
+# Nota1: se ignona la parte de network porque al usar docker-compose este crea una red nueva para usar los contenedores
+# Nota2: se ignora el network-alias ya que lee el nombre que se le da a cada parte y les pone ese alias, en este caso app y mysql
