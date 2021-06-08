@@ -171,12 +171,12 @@ services:
 # Nota1: se ignona la parte de network porque al usar docker-compose este crea una red nueva para usar los contenedores
 # Nota2: se ignora el network-alias ya que lee el nombre que se le da a cada parte y les pone ese alias, en este caso app y mysql**
 
-####Y lugo para ejecutar sería:
+#### Y luego para ejecutar sería:
 `docker-compose up -d`
 
-## Nota: Como el mysql tarda un poco mas en levantar, la app da error, esto se ve con docker logs imagen_contendor_app
-## Se vuelve a ejecutar el docker-compose -d y levanta todo lo que no esté arriba
+#### Nota: Como el mysql tarda un poco mas en levantar, la app da error, esto se ve con docker logs imagen_contendor_app
+#### Se vuelve a ejecutar el docker-compose -d y levanta todo lo que no esté arriba
 
-####Para eliminar todo, incluyendo la red
+#### Para eliminar todo, incluyendo la red
 `docker-compose down`
 
